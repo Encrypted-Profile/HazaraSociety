@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E057CACB-37B8-4740-9145-32262BCFF65D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HazaraSociety</RootNamespace>
+    <AssemblyName>HazaraSociety</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\PRISM\Desktop\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClass.Designer.cs">
+      <DependentUpon>AddClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddExam.Designer.cs">
+      <DependentUpon>AddExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSection.Designer.cs">
+      <DependentUpon>AddSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSubject.Designer.cs">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTeacher.Designer.cs">
+      <DependentUpon>AddTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Attendance.cs" />
+    <Compile Include="App_Code\Classes.cs" />
+    <Compile Include="App_Code\Common.cs" />
+    <Compile Include="App_Code\DBConnection.cs" />
+    <Compile Include="App_Code\Exam.cs" />
+    <Compile Include="App_Code\MarkDistribution.cs" />
+    <Compile Include="App_Code\Registration.cs" />
+    <Compile Include="App_Code\Section.cs" />
+    <Compile Include="App_Code\Student.cs" />
+    <Compile Include="App_Code\Subject.cs" />
+    <Compile Include="App_Code\Teacher.cs" />
+    <Compile Include="ChangeClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeClass.Designer.cs">
+      <DependentUpon>ChangeClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Done.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Done.Designer.cs">
+      <DependentUpon>Done.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Error.Designer.cs">
+      <DependentUpon>Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamSection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExamSection.Designer.cs">
+      <DependentUpon>ExamSection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalResult.Designer.cs">
+      <DependentUpon>FinalResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateFinalResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerateFinalResult.Designer.cs">
+      <DependentUpon>GenerateFinalResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageStudents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageStudents.Designer.cs">
+      <DependentUpon>ManageStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageTeachers.Designer.cs">
+      <DependentUpon>ManageTeachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarkAttendance.Designer.cs">
+      <DependentUpon>MarkAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkAttendanceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MarkAttendanceControl.Designer.cs">
+      <DependentUpon>MarkAttendanceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MarkResult.Designer.cs">
+      <DependentUpon>MarkResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkResultcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MarkResultcs.Designer.cs">
+      <DependentUpon>MarkResultcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterNewStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegisterNewStudent.Designer.cs">
+      <DependentUpon>RegisterNewStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ResultViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultViewer.Designer.cs">
+      <DependentUpon>ResultViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectClass.Designer.cs">
+      <DependentUpon>SelectClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentManagement.Designer.cs">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WelcomePage.Designer.cs">
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YesNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YesNo.Designer.cs">
+      <DependentUpon>YesNo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddClass.resx">
+      <DependentUpon>AddClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddExam.resx">
+      <DependentUpon>AddExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSection.resx">
+      <DependentUpon>AddSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSubject.resx">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTeacher.resx">
+      <DependentUpon>AddTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeClass.resx">
+      <DependentUpon>ChangeClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Done.resx">
+      <DependentUpon>Done.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Error.resx">
+      <DependentUpon>Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamSection.resx">
+      <DependentUpon>ExamSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalResult.resx">
+      <DependentUpon>FinalResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateFinalResult.resx">
+      <DependentUpon>GenerateFinalResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageStudents.resx">
+      <DependentUpon>ManageStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageTeachers.resx">
+      <DependentUpon>ManageTeachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkAttendance.resx">
+      <DependentUpon>MarkAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkAttendanceControl.resx">
+      <DependentUpon>MarkAttendanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkResult.resx">
+      <DependentUpon>MarkResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarkResultcs.resx">
+      <DependentUpon>MarkResultcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegisterNewStudent.resx">
+      <DependentUpon>RegisterNewStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinalResult.rdlc" />
+    <EmbeddedResource Include="Reports\TermResult.rdlc" />
+    <EmbeddedResource Include="ResultViewer.resx">
+      <DependentUpon>ResultViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectClass.resx">
+      <DependentUpon>SelectClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentManagement.resx">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomePage.resx">
+      <DependentUpon>WelcomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YesNo.resx">
+      <DependentUpon>YesNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReportDataset.xsc">
+      <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </None>
+    <None Include="ReportDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportDataset.xss">
+      <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\closewhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus Math _32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pull Down_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student Female_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student Registration_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student Registration_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Course_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student Female_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Class_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quiz_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test Passed_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ratings_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purchase Order_52px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Private_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Front Desk_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profilepic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patti1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patti2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Business Building_64px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Classroom_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\More_64px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus Math _32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus_52px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pirates of the Caribbean_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Theatre Mask_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Candy Vivian Icon 51.png" />
+    <None Include="Resources\markatt.png" />
+    <None Include="Resources\attendance1.png" />
+    <None Include="Resources\manageclasses.png" />
+    <None Include="Resources\Training_ICON.png" />
+    <None Include="Resources\result.png" />
+    <None Include="Resources\list.png" />
+    <None Include="Resources\attendance.png" />
+    <None Include="Resources\payroll.png" />
+    <None Include="Resources\subjects.png" />
+    <None Include="Resources\default.jpg" />
+    <None Include="Resources\banner1.png" />
+    <None Include="Resources\banner.png" />
+    <None Include="Resources\white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HEIN%27S DOCK 1.0 TEXTEDIT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\REAL OSX SYSTEM POWER.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
